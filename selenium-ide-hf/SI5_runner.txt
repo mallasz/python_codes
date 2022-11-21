@@ -1,0 +1,26 @@
+D:\python\AutomataTeszteles\SeleniumIde3>selenium-side-runner -w 1 SI4_test_suites.side
+info:    Running SI4_test_suites.side
+
+ RUNS  ./CreateAndDeleteLocation.test.js
+
+ RUNS  ./CreateAndDeleteLocation.test.js
+
+ RUNS  ./CreateAndDeleteLocation.test.js
+ PASS  ./CreateAndDeleteLocation.test.js
+
+ RUNS  ./CancelLocation.test.js
+
+ RUNS  ./CancelLocation.test.js
+ PASS  ./CancelLocation.test.js
+
+ RUNS  ./CheckIfLabelExists.test.js
+
+ RUNS  ./CheckIfLabelExists.test.js
+ PASS  ./CheckIfLabelExists.test.js
+
+Test Suites: 3 passed, 3 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        8.935s, estimated 20s
+Ran all test suites.
+

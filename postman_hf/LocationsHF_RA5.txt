@@ -1,0 +1,44 @@
+newman
+
+LocationsHF_RA4
+
+→ GetLocations
+  GET localhost:8080/api/locations [200 OK, 897B, 191ms]
+
+→ GetLocation
+  GET localhost:8080/api/locations/10 [200 OK, 381B, 28ms]
+
+→ GetLocations_pages
+  GET localhost:8080/api/locations/pages?page=3&size=3 [200 OK, 569B, 28ms]
+
+→ PostLocation
+  POST localhost:8080/api/locations [201 Created, 390B, 82ms]
+
+→ PostLocation Unsuccessfull
+  POST localhost:8080/api/locations [400 Bad Request, 419B, 36ms]
+
+→ DeleteLocation
+  DELETE localhost:8080/api/locations/10 [204 No Content, 201B, 39ms]
+
+→ DeleteLocation Unsuccessfull
+  DELETE localhost:8080/api/locations/{id} [400 Bad Request, 359B, 21ms]
+
+┌─────────────────────────┬───────────────────┬───────────────────┐
+│                         │          executed │            failed │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              iterations │                 1 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│                requests │                 7 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│            test-scripts │                 8 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│      prerequest-scripts │                 7 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              assertions │                 0 │                 0 │
+├─────────────────────────┴───────────────────┴───────────────────┤
+│ total run duration: 1045ms                                      │
+├─────────────────────────────────────────────────────────────────┤
+│ total data received: 1.52kB (approx)                            │
+├─────────────────────────────────────────────────────────────────┤
+│ average response time: 60ms [min: 21ms, max: 191ms, s.d.: 56ms] │
+└─────────────────────────────────────────────────────────────────┘

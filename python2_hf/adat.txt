@@ -1,0 +1,9 @@
+Egyszer
+volt,
+hol
+nem
+volt,
+volt
+egyszer
+egy
+ember.

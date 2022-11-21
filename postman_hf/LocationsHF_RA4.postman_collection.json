@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "f40f0492-57f6-438d-9ea6-e176d13a8c0e",
+		"name": "LocationsHF_RA4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21169216"
+	},
+	"item": [
+		{
+			"name": "GetLocations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"var index=Math.floor((Math.random()*jsonData.length))\r",
+							"pm.collectionVariables.set(\"location_id\",jsonData[index].id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/locations",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/locations/{{location_id}}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"{{location_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLocations_pages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/locations/pages?page=3&size=3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Budapest\",\r\n  \"coords\": \"47.497912,19.040235\",\r\n  \"interestingAt\": \"2022-05-30T19:28:50.285Z\",\r\n  \"tags\": \"capital,favourite\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/locations",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostLocation Unsuccessfull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"coords\": \"47.497912,19.040235\",\r\n  \"interestingAt\": \"2022-05-30T19:28:50.285Z\",\r\n  \"tags\": \"capital,favourite\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/locations",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteLocation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/locations/{{location_id}}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"{{location_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteLocation Unsuccessfull",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/locations/{id}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "location_id",
+			"value": ""
+		}
+	]
+}

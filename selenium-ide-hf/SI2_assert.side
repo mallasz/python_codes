@@ -1,0 +1,177 @@
+{
+  "id": "5869d4ac-b036-4fce-a992-9e54bb87689c",
+  "version": "2.0",
+  "name": "SI2_assert",
+  "url": "http://localhost:8080/",
+  "tests": [{
+    "id": "f9e8a4e3-d04f-4b7c-b863-5ff7d8489f9b",
+    "name": "NewLocation",
+    "commands": [{
+      "id": "97848a36-dff7-44c7-a51a-4b901333f4ee",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e6db54f-e120-4d50-8b8f-6a51ebde37ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a264351-01c6-4d89-8219-cccfe3d2c1d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-location-link",
+      "targets": [
+        ["id=create-location-link", "id"],
+        ["linkText=Create location", "linkText"],
+        ["css=#create-location-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Create location')]", "xpath:link"],
+        ["xpath=//a[@id='create-location-link']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create location')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e9501d0-5c98-403c-9e9a-5e47b4e420c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=location-name",
+      "targets": [
+        ["id=location-name", "id"],
+        ["css=#location-name", "css:finder"],
+        ["xpath=//input[@id='location-name']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34e071fa-694b-4028-8613-0b42bf544004",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-name",
+      "targets": [
+        ["id=location-name", "id"],
+        ["css=#location-name", "css:finder"],
+        ["xpath=//input[@id='location-name']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Veszprém"
+    }, {
+      "id": "c72b5933-f7df-4a48-b17e-2caeaabf357f",
+      "comment": "",
+      "command": "click",
+      "target": "id=location-coords",
+      "targets": [
+        ["id=location-coords", "id"],
+        ["css=#location-coords", "css:finder"],
+        ["xpath=//input[@id='location-coords']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ce2459e-1b7b-4682-a686-c11724a9c78b",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-coords",
+      "targets": [
+        ["id=location-coords", "id"],
+        ["css=#location-coords", "css:finder"],
+        ["xpath=//input[@id='location-coords']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "47.0951,17.9057"
+    }, {
+      "id": "cf8e819a-1187-4186-9fa3-da653554a32e",
+      "comment": "",
+      "command": "click",
+      "target": "id=location-interesting-at",
+      "targets": [
+        ["id=location-interesting-at", "id"],
+        ["css=#location-interesting-at", "css:finder"],
+        ["xpath=//input[@id='location-interesting-at']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ebd3ba3-18ba-421d-b9e2-11919391637f",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-interesting-at",
+      "targets": [
+        ["id=location-interesting-at", "id"],
+        ["css=#location-interesting-at", "css:finder"],
+        ["xpath=//input[@id='location-interesting-at']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2022-04-29T21:20:49"
+    }, {
+      "id": "b2205486-43f8-4dbd-bead-38b4f3279aa2",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(5) > .btn-primary",
+      "targets": [
+        ["css=p:nth-child(5) > .btn-primary", "css:finder"],
+        ["xpath=//input[@value='Create location']", "xpath:attributes"],
+        ["xpath=//form[@id='location-form']/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "385e52c3-d033-4ad3-8868-5f4e22d629ff",
+      "comment": "",
+      "command": "close",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "eaaa057a-e5d1-4358-8f4d-9b504bd299a4",
+    "name": "LocationsTag",
+    "commands": [{
+      "id": "1de247ed-72e0-44e3-837b-3553a07d6d2c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd75672d-291c-4a2b-ada6-aa6cbb2e70c8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f1d0004-b42e-4baa-ae20-9fd9f815cbd2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//h1[contains(.,'Locations')]",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Locations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e1b36de2-6fd5-40a2-aa34-66799a6cc336",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f9e8a4e3-d04f-4b7c-b863-5ff7d8489f9b"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
